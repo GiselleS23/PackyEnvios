@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Cambio a español MPL-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"> -->
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/attribution.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/youtube.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/facebook.css' rel='stylesheet'>
+    <link href='https://unpkg.com/css.gg@2.0.0/icons/css/twitter.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <script src="seguimiento.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <title>Packy Envíos</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./img/logo-grande.png" alt="Logo Packy"> <!-- Imagen del logo -->
+        <nav>
+            <a href="#nosotros">NOSOTROS</a>
+            <!-- Martin podrias cambiar el nosotros por la palabra Home y que linkee al hero -->
+            <!-- Falta agregar una sección "nosotros". Lo piden en el TP Trataré de hacerlo mañana a la tarde-->
+            <a href="#services">SERVICIOS</a>
+            <a href="#ubicacion">SUCURSALES</a>
+            <a href="#seccionClientes">CLIENTES</a>
+            <a href="#footer">CONTÁCTENOS</a>
+            <a href="#cotizacion">COTIZAR</a>
+
+            <!-- Cambié los btn por <a> para darles hiperlinks -->
+            <!--          <button class="btn-nav" id = "nosotros" >NOSOTROS</button>                                
+            <button class="btn-nav" id = "servicios">SERVICIOS</button>
+            <button class="btn-nav" id = "sucursale">SUCURSALES</button>
+            <button class="btn-nav" id = "clientes">CLIENTES</button>
+            <button class="btn-nav" id = "contactenos">CONTÁCTENOS</button> -->
+        </nav>
+
+        <button class="btn-menu"> <!-- diseño responsivo-->
+            <i class="bi bi-list"></i>
+        </button>
+
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-title">
+                <h1>
+                    Todos tus <span class="font-color-packy">Envíos</span> a un solo <span
+                        class="font-color-packy">Click</span> de distancia
+                </h1>
+                <div class="parrafo-hero">
+                    <!-- INICIO SEGUIMIENTO -->
+                    <div class="contenedorSeguimiento">
+                        <h3>Consultá el seguimiento aquí</h3>
+                        <input type="number" id="numeroSeguimiento" placeholder="Ingrese el número de seguimiento">
+                        <!-- <input type="submit" id="btnAceptar" value="Buscar"> -->
+                        <button class="btnAceptar" onClick="javascript:window.open('seguimiento.html', '_blank');">Buscar</button>
+                    </div>
+                    <!-- <p>A powerful yet simple, interactive system for storing, tracking, sharing and managing immigration
+                        documents.</p> -->
+                </div>
+            </div>
+            <div class="img-container">
+                <img src="img/delivery-hero.svg" alt="personas enviando paquetes">
+            </div>
+        </section>
+
+        <!-- INICIO DE LA SECCION DE CARDS -->
+
+        <section class="services" id="services"> <!-- Agregué id para poder hacer hiperlink en el nav -->
+            <div class="service-title">
+                <h2>
+                    Nuestros Servicios
+                </h2>
+            </div>
+            <div class="card-service">
+                <img src="img/services1.svg" alt="persona con paquetes">
+                <h2>Frustrated With <span class="font-color-packy">Document</span> Management</h2>
+                <p>The Best Cloud Storage and File-Sharing Services for 2022 , Microsoft OneDrive.</p>
+            </div>
+
+            <div class="card-service">
+                <img src="img/services2.svg" alt="hombre viendo el seguimiento">
+                <h2>Frustrated With <span class="font-color-packy">Document</span> Management</h2>
+                <p>The Best Cloud Storage and File-Sharing Services for 2022 , Microsoft OneDrive.</p>
+            </div>
+
+            <div class="card-service">
+                <img src="img/services3.svg" alt="atencion callcenter">
+                <h2>Frustrated With <span class="font-color-packy">Document</span> Management</h2>
+                <p>The Best Cloud Storage and File-Sharing Services for 2022 , Microsoft OneDrive.</p>
+            </div>
+
+        </section>
+        <!-- FIN SECCION CARDS -->
+
+        <section>
+            <div class="seccionClientes" id="seccionClientes"> <!-- Agregué id para poder hacer hiperlink en el nav -->
+                <div class="clientesSatisfechos">
+                    <h2>Clientes Satisfechos</h2>
+                </div>
+                <ul class="list-container"></ul> <!-- api -->
+            </div>
+        </section>
+        <section>
+            <div class="ubicacion" id="ubicacion">
+                <h2>Buscá tu sucursal más cercana</h2>
+                <iframe src="https://www.google.com/maps/d/embed?mid=149mHsvK1vtmA1CiVmRY1TbiimUKfDaQ&ehbc=2E312F"
+                    width="600" height="400"></iframe>
+                <!-- <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7805.743268140877!2d-58.417719710413266!3d-34.6569564279737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccb8d6c8c81b9%3A0xa0fa8bee60084424!2sDeposito%20y%20Logistica%20Santafesina%2C%20Sucursal%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1680666095992!5m2!1ses-419!2sar"
+                    width="1200" height="600" style="border:3px solid gray;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe> -->
+            </div>
+
+        </section>
+        <section class="formulario">
+            <form class="formUsuarios" id="cotizacion">
+                <h2>Calcula tu costo de Envio</h2>
+                <div class="inputContainer">
+                    <label for="nombre">Ingrese el nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                </div>
+                <div class="inputContainer">
+                    <label for="Apellido">Ingrese el Apellido:</label>
+                    <input type="text" id="apellido" name="Apellido" placeholder="Ingrese su Apellido" required>
+                </div>
+                <div class="inputContainer">
+                    <label for="contrasena">Ingrese su email:</label>
+                    <input type="email" id="email" name="email" placeholder="Ingrese su email" required>
+                </div>
+                <div class="inputContainer">
+                    <label for="Tamaño">Ingrese Tamaño del Paquete:</label>
+
+                    <select name="tamaño" id="tamaño" required>
+                        <option disabled selected>Selecciona una opcion</option>
+                        <option value="Pequeño">Pequeño (10x10)</option>
+                        <option value="Mediano">Mediano (20x20)</option>
+                        <option value="Grande">Grande (50x50)</option>
+                        <option value="Extra Grande">Extra Grande (mas de50x50)</option>
+                    </select>
+                </div>
+                <div class="inputContainer">
+                    <label for="peso">Ingrese Peso del Paquete (kg):</label>
+                    <input type="text" id="peso" name="peso" placeholder="Ingrese Peso del paquete" required>
+                </div>
+                <div class="inputContainer">
+                    <label for="provincia">Ingrese la provincia:</label>
+                    <select name="provincia" id="provincia" required>
+                        <option disabled selected>Selecciona una opcion</option>
+                        <option value="Buenos Aires">Buenos Aires</option>
+                        <option value="Catamarca">Catamarca</option>
+                        <option value="Capital Federal">Capital Federal</option>
+                        <option value="Chaco">Chaco</option>
+                        <option value="Chubut">Chubut</option>
+                        <option value="Córdoba">Córdoba</option>
+                        <option value="Corrientes">Corrientes</option>
+                        <option value="Entre Ríos">Entre Ríos</option>
+                        <option value="Formosa">Formosa</option>
+                        <option value="Jujuy">Jujuy</option>
+                        <option value="La Pampa">La Pampa</option>
+                        <option value="La Rioja">La Rioja</option>
+                        <option value="Mendoza">Mendoza</option>
+                        <option value="Misiones">Misiones</option>
+                        <option value="Neuquén">Neuquén</option>
+                        <option value="Río Negro">Río Negro</option>
+                        <option value="Salta">Salta</option>
+                        <option value="San Juan">San Juan</option>
+                        <option value="San Luis">San Luis</option>
+                        <option value="Santa Cruz">Santa Cruz</option>
+                        <option value="Santa Fe">Santa Fe</option>
+                        <option value="Santiago del Estero">Santiago del Estero</option>
+                        <option value="Tierra del Fuego">Tierra del Fuego</option>
+                        <option value="Tucumán">Tucumán</option>
+                    </select>
+                </div>
+                <input type="submit" value="Costo del Envio" class="btn-registrar">
+            </form>
+            <div class="usuariosRespuesta" id="usuariosRespuesta"></div>
+        </section>
+    </main>
+
+
+    <footer id="footer"> <!-- Agregué id para poder hacer hiperlink en el nav -->
+        <div class="pie-de-pagina">
+            <i class="bi bi-android2"></i>
+            <p>Copyright 2022 nazishedu. All rights reserved. Terms of use & privacy policy.</p>
+            <div>
+                <h3>Follow Us</h3>
+                <div>
+                    <i class="gg-facebook"></i>
+                    <i class="gg-youtube"></i>
+                    <i class="gg-twitter"></i>
+                </div>
+            </div>
+
+        </div>
+
+
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>

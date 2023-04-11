@@ -1,0 +1,666 @@
+/* color #FFC727 fuente poppins */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css");        /* botón responsivo MPL */
+
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Aqui creamos las variables */
+:root {
+    --color-principal: #FFC727;
+    --color-container: #e0e0e0;
+    --color-fondo: #F5F5F5;
+    /* colores de fondo de boton o letra de boton */
+    --color-card-container: #f68b8a;
+    /* Navbar y card container de personas ficticias */
+    --color-texto: #482c3d;
+    /* h1, h2, parrafos */
+    --color-border-radius: #ce5959;
+    /* img undraw, boton importante */
+    --color-background-lp: #DBC8C8;
+    /* fondo de la landing page */
+    --parrafos: #3D3D3D;
+    /* borders, otros parrafos*/
+
+
+}
+
+header {                                                                                    /* Ajusté variables para que funcione con el nav MPL*/
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5vh 0.5vw;
+    align-items: center;
+    background-color: var(--color-border-radius);
+}
+
+.logo{                                                                                      
+    display: flex;
+    min-height: 50px;
+    min-width: 100px;
+    height: 7vh;
+    width: 9vw;
+    border-radius: 10px;
+}
+
+/* EFECTO EN LOS H2 */
+h2{
+    
+  transition: color 0.2s ease-in-out; /* Transición suave al cambiar de color */
+}
+
+h2.scroll {
+    animation-name: changeColor;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+  }
+  
+  @keyframes changeColor {
+    from {
+      color: #000; /* Color original */
+    }
+    to {
+      color: #f00; /* Color al hacer scroll */
+    }
+  }
+
+ nav {                                                                                          /* Ajustes al nav  MPL*/
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+    justify-content: space-between;
+    align-items:end;
+/*     border: blueviolet solid 5px; */                                                         /* Tirar harina al fantasma */
+} 
+
+a{
+    display: flex;
+    color: var(--color-fondo);
+    text-decoration: none; 
+    height: 50px;
+    align-items: center;
+    padding: 12px 5px;
+    /* border-radius: 50px; */
+    font-size: 15px;
+    /* border: var(--color-texto) solid 1.5px; */
+    /* background-color: var(--color-fondo); */
+    filter: drop-shadow(4px -4px 24px rgba(94, 71, 71, 0.25));
+}
+
+nav a:hover{
+    color: var(--color-card-container);
+    z-index: 1;
+}
+
+html { scroll-behavior: smooth;}                                                                     /*  Hace el hiperlink "suave" */
+
+/* .btn-nav {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    padding: 12px 5px;
+    border-radius: 60px;
+    font-size: 15px;
+    border: var(--color-texto) solid 1.5px;
+    background-color: var(--color-fondo);
+    filter: drop-shadow(4px -4px 24px rgba(94, 71, 71, 0.25));
+} 
+
+.btn-nav:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+ */
+.btn-menu{
+    background-color: transparent;                                 
+    color: var(--color-background-lp);
+    border:none;
+    font-size: 35px;                                                 /* Altura del ícono. Es una propiedad heredable */
+    display: none;                                                   /* Oculta el elemento, no lo elimina*/
+  
+}
+/* .gg-attribution {                                                                           //Al cambiar el logo de ícono  a imagen, esta sección no se usa más//
+    color: var(--color-principal);
+    font-size: 40px;
+    -webkit-text-stroke: 1px black;
+} */
+
+/* .btn-register {
+    padding: 12px 20px;
+    border-radius: 14px;
+    font-size: 22px;
+    border: none;
+    background-color: var(--color-card-container); */
+    /* aqui usamos la variable */
+/*     color: #F5F5F5;
+} */
+
+/* .btn-register:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn-login {
+    padding: 12px 30px;
+    background-color: var(--color-fondo);
+    border: 1px var(--color-border-radius);
+    border-radius: 14px;
+    font-size: 22px;
+    filter: drop-shadow(4px -4px 24px rgba(94, 71, 71, 0.25));
+}
+
+.btn-login:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+} */
+
+.hero {
+    padding: 8vh 5vw; /* Hice mas alto el padding para que se vea el efecto */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* o space-around */
+    background-color: var(--color-fondo);
+}
+
+.hero .hero-title {
+    width: 30vw;
+    /* respeta los espacios */
+}
+
+.hero-title h1 {
+
+    font-size: 40px;
+    margin-bottom: 20px;
+
+}
+
+.hero-title .parrafo-hero {
+    font-weight: lighter;
+    font-size: 20px;
+}
+
+.font-color-packy
+
+/* Aqui cambiamos el color de documentos con etiqueta span en html */
+    {
+    color: var(--color-card-container);
+}
+
+.img-container {
+    width: 30vw;
+    margin-right: 5vw;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+/* SEGUIMIENTO */
+
+.contenedorSeguimiento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* input[type="submit"] {
+    padding: 10px;
+    background-color: var(--color-card-container);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--color-border-radius);
+} */
+
+.btnAceptar{
+    padding: 10px;
+    background-color: var(--color-card-container);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btnAceptar:hover{
+    background-color: var(--color-border-radius);
+}
+/* FIN DE SECCION SEGUIMIEMTO */
+
+/* SECCION SERVICES - ESTILO DE LAS CARDS */
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 10vh 5vw;
+    background-color: var(--color-fondo);
+    /* border-top-right-radius: 100px;
+    border-top-left-radius: 100px; */
+}
+
+.service-title {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+
+}
+
+.card-service {
+    /* border: 1px solid black; */
+    width: 300px;
+    /* 30% se hace mas cuadradas */
+    padding: 20px;
+    background-color: white;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: 0.4s ease-out;
+
+}
+
+/* arreglar el hover */
+
+.card-service:hover {
+
+    transform: translateY(20px);
+
+}
+
+.card-service img {
+    width: 180px;
+    height: 155px;
+    display: block;
+    margin: auto;
+
+}
+
+.card-service h2 {
+    margin: 10px;
+    text-align: center;
+}
+
+.card-service p {
+    margin: 10px;
+    text-align: center;
+}
+
+.ubicacion {
+    background-color: var(--color-background-lp);
+    padding: 5vh;
+}
+
+.ubicacion h2 {
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+iframe {
+    display: block;
+    margin: auto;
+    margin-bottom: 2vh;
+}
+
+/* api */
+
+li {
+    list-style: none;
+
+}
+
+.seccionClientes{
+    background-color: var(--color-fondo);
+    padding: 10vh 5vw;
+}
+.clientesSatisfechos h2 {
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+}
+
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* gap: 100px; */
+    justify-content: center;
+    align-items: center;
+    /* max-width: 100%; */
+    /*  margin: auto; */
+}
+
+.card-container {
+    /* margin: 0;
+    padding: 0; */
+    /* width: 100%; */
+    width: calc(25% - 10px);
+    /* Ajusta la anchura de la tarjeta según tus necesidades */
+    margin: 20px;
+    /* Ajusta la cantidad de espacio entre las tarjetas según tus necesidades */
+    background: linear-gradient(var(--color-border-radius), var(--color-card-container));
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px -10px rgba(0, 0, 0, 0.75);
+    color: var(--color-texto);
+    text-align: center;
+    font-weight: bold;
+    /* max-width: 100%; */
+    /* padding: 20px; */
+}
+
+.round {
+    border: 10px solid #ce5959;
+    border-radius: 50%;
+    border-style: inset;
+    padding: 7px;
+    margin-top: 20px;
+}
+
+.name-container {
+    margin: 15px 0px;
+
+}
+/* formulario */
+.formulario {
+    background-color: var(--color-fondo) ;
+    padding: 10px 50px 100px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+
+}
+
+.formUsuarios {
+    width: 40vw;
+    background-color: var(--color-card-container);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    /* font-family: ; */
+    border: 3px solid var(--color-border-radius);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2vh;
+}
+
+.formUsuarios h2 {
+    font-size: 22px;
+    /* margin-bottom: 10px; */
+    /* padding: 5px; */
+    border-radius: 4px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.btn-registrar {
+    width: 18vw;
+    background-color: var(--color-border-radius);
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 4px;
+    box-shadow: 1px 1px black;
+    margin-top: 7px;
+}
+
+.btn-registrar:hover {
+    transition: .4s ease-in-out;
+    background-color: #DBC8C8;
+    cursor: pointer;
+}
+
+.inputContainer label {
+    font-size: 15px;
+    font-weight: bolt;
+
+
+}
+
+.inputContainer input,
+select {
+    width: 90%;
+    font-size: 12px;
+    border: none;
+    border-bottom: 1px solid rgb(30, 30, 30);
+    padding: 10px;
+    box-shadow: 2px 1px black;
+    margin-top: 5px;
+}
+
+.usuariosRespuesta {
+  
+    /* background-color: #DBC8C8; */
+    /* min-height: 90vh; */
+    /* display: flex;
+    align-items: center; */
+    font-weight: bold;
+    font-family: "poppins";
+    max-width: 50%;
+    /* border: 2px solid var(--color-border-radius); */
+    /* width: 40vw;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px; */
+   
+
+}
+
+footer {
+    display: flex;
+    padding: 10vh 5vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--color-container);
+}
+
+.font-color-packy {
+    color: var(--color-card-container);
+}
+
+/* Media Query: Siempre van abajo de todo del CSS */
+@media screen and (max-width: 775px){                               /* Media Query: Creo la distancia horizontal(px) para que me esconda el nav */
+    nav{
+        display: none
+    }
+    .btn-menu{
+        display:block;                                               /* Lo vuelve a mostrar */
+    }
+}
+
+@media screen and (max-width: 952px) {
+
+    .formUsuarios {
+        width: 70%;
+
+    }
+
+    .formulario {
+        /* background-color: #F5F5F5; */
+        padding: 10px 50px 100px 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+
+
+    }
+
+    .usuariosRespuesta {
+        /* background-image: url(./delivery2.svg); */
+        /* min-height: 50vh; */
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 20px;
+        width: 70%;
+        /* padding: 30px; */
+        /* margin: auto; */
+
+    }
+
+    .btn-registrar {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+
+    .formUsuarios {
+        width: 90%;
+
+    }
+
+    .usuariosRespuesta {
+        width: 90%;
+    }
+
+    .btn-registrar {
+        width: 90%;
+    }
+
+}
+
+/* vector */
+/* terminar de ver lo de las redes sociales q estan desacomodadas */
+/* FOOTER ARREGLAR ESTO */
+/* .pie-de-pagina .gg-twitter{
+    color: #00C5C5;
+    position: absolute;
+   
+    align-items: flex-end;
+}
+.pie-de-pagina .gg-facebook{
+    color: #0076E2;
+    position: absolute;
+    right: 300px;
+    top: 2072.54px;
+    align-items: flex-end;
+}
+
+.pie-de-pagina .gg-youtube{
+    color: #E50000;
+    position: absolute;
+    right: 250px;
+    top: 2077.54px;
+    align-items: flex-end;
+} */
+
+/* ESTILOS DE LA PAGINA DE SEGUIMIENTO */
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--color-border-radius);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+.side {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+
+.side::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: red;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+
+.left {
+    left: 0;
+  }
+  
+
+.right {
+    left: 50%;
+  }
+  
+
+.left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid green;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent blue;
+  }
+  
+
+.right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid black;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent;
+  }
+  
+
+.right::after {
+    left: -16px;
+  }
+  
+
+.contenido {
+    padding: 20px 30px;
+    background-color: aqua;
+    position: relative;
+    border-radius: 6px;
+  }
